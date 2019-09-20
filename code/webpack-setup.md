@@ -14,8 +14,8 @@ module.exports = {
 		filename: '[name]-bundle.js',
 		path: '/',
 		devtoolLineToLine: true,
-    pathinfo: true,
-    sourceMapFilename: '[name].js.map'
+		pathinfo: true,
+		sourceMapFilename: '[name].js.map'
 	},
 	devServer: {
 		contentBase: path.join(__dirname, '/public'),

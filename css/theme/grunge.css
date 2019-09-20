@@ -339,3 +339,17 @@ span.block {
   background: #000;
   line-height: 110%;
   padding: 0px .25em; }
+
+.span-images {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row; }
+  .span-images div {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    display: flex; }
+    .span-images div img {
+      align-self: center;
+      width: 60%;
+      max-height: 100%; }

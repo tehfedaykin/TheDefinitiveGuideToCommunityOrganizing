@@ -1,262 +1,395 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<meta name="description" content="If you're dealing with forms in Angular on a regular basis one of the most powerful things you can learn is how to use the Control Value Accessor interface. Learn how to use this interface to solve even the most complicated form problems!">
-		<meta name="keywords" content="Jennifer Wadella, software engineer, women in tech speaker, female software engineer, female speaker, female founder, non-profit consultant, female coder, Kansas City Women in Technology, kcwit, kcwit founder, women engineers, girls in tech, women in tech, coding &amp; cocktails, coding &amp; cupcakes, CoderDojoKC">
-		<meta itemprop="name" content="Supporting Old-Fashioned AngularJS Apps in a Modern TypeScript World">
-		<meta itemprop="description" content="If you're dealing with forms in Angular on a regular basis one of the most powerful things you can learn is how to use the Control Value Accessor interface. Learn how to use this interface to solve even the most complicated form problems!">
-		<meta itemprop="image" content="http://tehfedaykin.github.io/BetterAngularReactiveForms/img/cover.png">
-		<meta property="og:title" content="Supporting Old-Fashioned AngularJS Apps in a Modern TypeScript World">
-		<meta property="og:type" content="website">
-		<meta property="og:image" content="http://tehfedaykin.github.io/BetterAngularReactiveForms/img/cover.png">
-		<meta property="og:url" content="http://tehfedaykin.github.io/BetterAngularReactiveForms">
-		<meta property="og:description" content="If you're dealing with forms in Angular on a regular basis one of the most powerful things you can learn is how to use the Control Value Accessor interface. Learn how to use this interface to solve even the most complicated form problems!">
-		<meta property="twitter:card" content="summary">
-		<meta property="twitter:title" content="Supporting Old-Fashioned AngularJS Apps in a Modern TypeScript World">
-		<meta property="twitter:creator" content="@likeOMGitsFEDAY">
-		<meta property="twitter:image" content="http://tehfedaykin.github.io/BetterAngularReactiveForms/img/cover.png">
-		<meta property="twitter:url" content="http://tehfedaykin.github.io/BetterAngularReactiveForms">
-		<meta property="twitter:description" content="If you're dealing with forms in Angular on a regular basis one of the most powerful things you can learn is how to use the Control Value Accessor interface. Learn how to use this interface to solve even the most complicated form problems!">
 
-		<title>Supporting Old-Fashioned AngularJS Apps in a Modern TypeScript World</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="description"
+		content="You don't want to say this out loud at parties, but you're still supporting a legacy AngularJS app and are struggling to stay current with modern techniques. We've all been there and it's going to be ok! In this talk you'll learn how to take advantage of TypeScript and reactive programming with RxJS, but in the context of an AngularJS application 'cause AngularJS devs need love too!">
+	<meta name="keywords"
+		content="Jennifer Wadella, software engineer, women in tech speaker, female software engineer, female speaker, female founder, non-profit consultant, female coder, Kansas City Women in Technology, kcwit, kcwit founder, women engineers, girls in tech, women in tech, coding &amp; cocktails, coding &amp; cupcakes, CoderDojoKC">
+	<meta itemprop="name" content="Supporting Old-Fashioned AngularJS Apps in a Modern TypeScript World">
+	<meta itemprop="description"
+		content="You don't want to say this out loud at parties, but you're still supporting a legacy AngularJS app and are struggling to stay current with modern techniques. We've all been there and it's going to be ok! In this talk you'll learn how to take advantage of TypeScript and reactive programming with RxJS, but in the context of an AngularJS application 'cause AngularJS devs need love too!">
+	<meta itemprop="image" content="http://tehfedaykin.github.io/ModernizingAngularJSApps/img/cover.png">
+	<meta property="og:title" content="Supporting Old-Fashioned AngularJS Apps in a Modern TypeScript World">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="http://tehfedaykin.github.io/ModernizingAngularJSApps/img/cover.png">
+	<meta property="og:url" content="http://tehfedaykin.github.io/ModernizingAngularJSApps">
+	<meta property="og:description"
+		content="You don't want to say this out loud at parties, but you're still supporting a legacy AngularJS app and are struggling to stay current with modern techniques. We've all been there and it's going to be ok! In this talk you'll learn how to take advantage of TypeScript and reactive programming with RxJS, but in the context of an AngularJS application 'cause AngularJS devs need love too!">
+	<meta property="twitter:card" content="summary">
+	<meta property="twitter:title" content="Supporting Old-Fashioned AngularJS Apps in a Modern TypeScript World">
+	<meta property="twitter:creator" content="@likeOMGitsFEDAY">
+	<meta property="twitter:image" content="http://tehfedaykin.github.io/ModernizingAngularJSApps/img/cover.png">
+	<meta property="twitter:url" content="http://tehfedaykin.github.io/ModernizingAngularJSApps">
+	<meta property="twitter:description"
+		content="You don't want to say this out loud at parties, but you're still supporting a legacy AngularJS app and are struggling to stay current with modern techniques. We've all been there and it's going to be ok! In this talk you'll learn how to take advantage of TypeScript and reactive programming with RxJS, but in the context of an AngularJS application 'cause AngularJS devs need love too!">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/monstera-dark.css">
+	<title>Supporting Old-Fashioned AngularJS Apps in a Modern TypeScript World</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/cactus.css">
 
-		<link rel="stylesheet" href="plugin/prism/monstera.css">
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<link rel="stylesheet" href="plugin/prism/monstera.css">
 
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section id="title">
-					<h1>Supporting Old-Fashioned AngularJS Apps in a Modern TypeScript World</h1>
-					<h3 class="small">Jennifer Wadella</h3>
-				</section>
-				<section id="me">
-					<div class="speaker-title">
-						<div class="flex-1">
-							<img class="circle plain" src="img/jennifer-wadella-headshot.jpeg" alt="Jennifer Wadella headshot">
-						</div>
-						<div class="flex-2">
-							<div class="">
-								<h2>Jennifer Wadella</h2>
-								<h3><a href="http://twitter.com/likeOMGitsFEDAY">@likeOMGitsFEDAY</a></h3>
-							</div>
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section id="title">
+				<h1>Supporting Old-Fashioned AngularJS Apps in a Modern TypeScript World</h1>
+				<h3 class="small">Jennifer Wadella</h3>
+			</section>
+			<section id="me">
+				<div class="speaker-title">
+					<div class="flex-1">
+						<img class="circle plain" src="img/jennifer-wadella-headshot.jpeg" alt="Jennifer Wadella headshot">
+					</div>
+					<div class="flex-2">
+						<div class="">
+							<h2>Jennifer Wadella</h2>
+							<h3><a href="http://twitter.com/likeOMGitsFEDAY">@likeOMGitsFEDAY</a></h3>
 						</div>
 					</div>
-					<ul class="small">
-						<li>JavaScript Developer at Bitovi</li>
-						<li>Legacy code sympathizer</li>
-						<li>Community Organizer</li>
-						<li>Kombucha brewin' crazy plant lady</li>
-					</ul>
-				</section>
-				<!----------------------------------------->
-				<section id="the-problem">
-					<h2>The Problem</h2>
-					<h3>"We're going to upgrade our AngularJS app ... some day."</h3>
-				</section>
-				<section id="prep-for-upgrade">
-					<h2>"How do we keep building features while preparing for an upgrade?"</h2>
-				</section>
-				<section id="update-skills">
-					<h2>"How do I keep my skills updated as a developer?"</h2>
-				</section>
-				<!----------------------------------------->
-				<section id="typescript-today">
-					<h2>You can take advantage of modern techniques TODAY</h2>
-				</section>
-				<section id="goals-for-this-talk">
-					<h2>Goals for this Talk</h2>
-					<ul>
-						<li class="fragment">Give you a roadmap of how to modernize your AngularJS app.</li>
-						<li class="fragment">Give you a crash course on modern concepts you may have tuned out on previously</li>
-						<li class="fragment">Give you resources to use to help advocate for modernizing your app.</li>
-						<li class="fragment">Give you an example repository with common scenarios to refer to.</li>
-					</ul>
-				</section>
-				<section id="roadmap">
-					<h2>Roadmap</h2>
-					<ol>
-						<li class="fragment">Modularize app</li>
-						<li class="fragment">Update/create build process to compile TypeScript files</li>
-						<li class="fragment">Convert core app structure files to TypeScript</li>
-						<li class="fragment">Take advantage of RxJS where it makes sense</li>
-						<li class="fragment">Build new features using Angular elements(web components)</li>
-					</ol>
-				</section>
-				<!----------------------------------------->
-				<section id="modularize">
-					<h2>Modularize App</h2>
-					john papa as jesus image
-					<p>The AngularJS style guide by John Papa</p>
-				</section>
-				<section id="styleguide-key-concepts">
-					<h2>Key Style Guide Concepts</h2>
-					<ul>
-						<li>One component per file</li>
-						<li>Controller view as</li>
-					</ul>
-				</section>
-				<!----------------------------------------->
-				<section id="build-process">
-					<h2>Update/create build process to compile TypeScript files</h2>
-				</section>
-				<section id="build-options">
-					<h2>Three main build options</h2>
-					logos here
-				</section>
-				<section id="grunt">
-					<h2>Grunt</h2>
-					logo
-				</section>
-				<section id="gulp">
-					<h2>Gulp</h2>
-					logo
-				</section>
-				<section id="webpack">
-					<h2>Webpack</h2>
-					logo
-				</section>
-				<section id="webpack-setup"
-					data-markdown="code/webpack-setup.md"
-					data-separator="^\n\n\n"
-					data-separator-vertical="^\n\n"
-					data-separator-notes="^Note:"
-					data-charset="iso-8859-15">
-				</section>
-				<section id="webpack-needs">
-					<h2>Webpack Needs</h2>
-					<ul>
-						<li class="fragment">Compile TypeScript files (lol duh)</li>
-						<li class="fragment">Inject compiled JS bundle to entry file (index.html)</li>
-						<li class="fragment">Serve compiled files</li>
-					</ul>
-				</section>
-				<section id="webpack-nice-to-haves">
-					<h2>Webpack nice to haves</h2>
-					<ul>
-						<li class="fragment">Bundling</li>
-						<li class="fragment">Development vs. test vs. production code</li>
-					</ul>
-				</section>
-				<!----------------------------------------->
-				<section id="typescript">
-					<h2>Convert core app structure files to TypeScript</h2>
-				</section>
-				<section id="install-angular-types"
-					data-markdown="code/install-angular-types.md"
-					data-separator="^\n\n\n"
-					data-separator-vertical="^\n\n"
-					data-separator-notes="^Note:"
-					data-charset="iso-8859-15">
-				</section>
-				<section id="import-html-template"
-					data-markdown="code/import-html-template.md"
-					data-separator="^\n\n\n"
-					data-separator-vertical="^\n\n"
-					data-separator-notes="^Note:"
-					data-charset="iso-8859-15">
-				</section>
-				<!----------------------------------------->
-				<section id="RxJS">
-					<h2>Start Using RxJS where it makes sense</h2>
-					<ul>
-						<li>Managing forms</li>
-						<li>Services</li>
-						<li>Routing?</li>
-					</ul>
-				</section>
-				<section id="reactive-programming-crash-course">
-					<h2>Reactive Programming Crash Course</h2>
-				</section>
-				<section id="async-pipe">
-					<h2>Async Pipe for AngularJS</h2>
-					<p><a href="https://github.com/cvuorinen/angular1-async-filter">https://github.com/cvuorinen/angular1-async-filter</a></p>
-				</section>
-				<!----------------------------------------->
-				<section id="angular-elements">
-					<h2>Angular Elements</h2>
-				</section>
-				<!----------------------------------------->
-				<section id="excited">
-					<h2>Excited to modernize your app?</h2>
-					screaming gif
-				</section>
-				<section id="what-not-to-do">
-					<h2>What NOT to Do</h2>
-					<p class="fragment">Do NOT run back to work and refactor your app 
-						over the weekend WITHOUT the consent of your team.</p>
-				</section>
-				<!----------------------------------------->
-				<section id="key-concepts">
-					<h2>Key Concepts</h2>
-					<ul>
-						<li class="fragment">Begin refactoring your app to follow the AngularJS style guide</li>
-						<li class="fragment">Choose a build process that makes sense for your team</li>
-						<li class="fragment">Start with rewriting major files into TypeScript</li>
-						<li class="fragment">Implement RxJS where it makes sense</li>
-						<li class="fragment">Consider building new features in Angular Elements</li>
-						<li class="fragment">Do NOTHING without buy-in from your team!</li>
-					</ul>
-				</section>
-				<!----------------------------------------->
-				<section id="questions">
-					<h2>Questions?</h2>
-					<img style="height:300px" class="plain" src="img/headtilt.gif" alt="Corgi confused">
-					<p>Slides available at: <a href="https://tehfedaykin.github.io/BetterAngularReactiveForms/" target="_blank">tehfedaykin.github.io/BetterAngularReactiveForms</a></p>
-					<p>Galaxy Rating App: <a href="https://github.com/tehfedaykin/galaxy-rating-app" target="_blank">https://github.com/tehfedaykin/galaxy-rating-app</a></p>
-					<p class="small">VS Code theme - <a href="https://marketplace.visualstudio.com/items?itemName=RobbOwen.synthwave-vscode">SynthWave '84 by Robb Owen</a></p>
-				</section>
-			</div>
+				</div>
+				<ul class="small">
+					<li>JavaScript Developer at Bitovi</li>
+					<li>Legacy code sympathizer</li>
+					<li>Community Organizer</li>
+					<li>Kombucha brewin' crazy plant lady</li>
+				</ul>
+			</section>
+			<!----------------------------------------->
+			<section id="the-problem">
+				<h2>The Problem</h2>
+				<h3>"We're going to upgrade our AngularJS app ... some day."</h3>
+			</section>
+			<section id="prep-for-upgrade">
+				<h2>"How do we keep building features while preparing for an upgrade?"</h2>
+			</section>
+			<section id="update-skills">
+				<h2>"How do I keep my skills updated as a developer?"</h2>
+			</section>
+			<section id="update-skills">
+				<h2>"I just got this AngularJS app dropped in my lap to maintain - TF do I do?"</h2>
+			</section>
+			<!----------------------------------------->
+			<section id="typescript-today">
+				<h2>You can take advantage of modern techniques TODAY</h2>
+			</section>
+			<section id="goals-for-this-talk">
+				<h2>Goals for this Talk</h2>
+				<ul>
+					<li class="fragment">Give you a roadmap of how to modernize your AngularJS app.</li>
+					<li class="fragment">Give you a crash course on modern concepts you may have tuned out on previously</li>
+					<li class="fragment">Give you resources to use to help advocate for modernizing your app.</li>
+					<li class="fragment">Give you an example repository with common scenarios to refer to.</li>
+				</ul>
+			</section>
+			<section id="roadmap">
+				<h2>Roadmap</h2>
+				<ol>
+					<li class="fragment">Modularize app</li>
+					<li class="fragment">Update/create build process to compile TypeScript files</li>
+					<li class="fragment">Convert core app structure files to TypeScript</li>
+					<li class="fragment">Take advantage of RxJS where it makes sense</li>
+					<li class="fragment">Build new features using Angular elements(web components)</li>
+				</ol>
+			</section>
+			<!----------------------------------------->
+			<section id="modularize">
+				<h2>Modularize App</h2>
+				<p>The <a target="_blank"
+						href="https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md">AngularJS style guide</a> by
+					John Papa</p>
+			</section>
+			<section id="styleguide-key-concepts">
+				<h2>Key Style Guide Concepts</h2>
+				<ul>
+					<li class="fragment">Practice Single Responsibility</li>
+					<li class="fragment">Use named functions</li>
+					<li class="fragment">Write Controller view as "vm" syntax</li>
+				</ul>
+			</section>
+			<!----------------------------------------->
+			<section id="build-process">
+				<h2>Update/create build process to compile TypeScript files</h2>
+			</section>
+			<section id="build-options">
+				<h2>Three main build options</h2>
+				<div class="span-images">
+					<div><img class="plain" src="img/grunt.png" alt="Grunt"></div>
+					<div><img class="plain" src="img/gulp.png" alt="Gulp"></div>
+					<div><img class="plain" src="img/webpack.png" alt="Webpack"></div>
+				</div>
+			</section>
+			<section id="grunt-install" data-markdown="code/grunt-install.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="grunt" data-markdown="code/grunt.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="gulp-install" data-markdown="code/gulp-install.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="gulp" data-markdown="code/gulp.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="webpack">
+				<h2>Webpack</h2>
+			</section>
+			<section id="webpack-setup" data-markdown="code/webpack-setup.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="webpack-needs">
+				<h2>Webpack Needs</h2>
+				<ul>
+					<li class="fragment">Compile TypeScript files (lol duh)</li>
+					<li class="fragment">Inject compiled JS bundle to entry file (index.html)</li>
+					<li class="fragment">Serve compiled files</li>
+				</ul>
+			</section>
+			<section id="webpack-nice-to-haves">
+				<h2>Webpack nice to haves</h2>
+				<ul>
+					<li class="fragment">Bundling</li>
+					<li class="fragment">Development vs. test vs. production code</li>
+				</ul>
+			</section>
+			<!----------------------------------------->
+			<section id="typescript">
+				<h2>Convert core app structure files to TypeScript</h2>
+			</section>
+			<!----------------------------------------->
+			<section id="typescript-crash-course">
+				<h2>TypeScript Crash Course</h2>
+				<ul>
+					<li>Types - determine what "types" variables should be</li>
+					<li>Classes - special functions that help abstract code</li>
+					<li>Interfaces - way to describe a programatic entity</li>
+					<li>Generics - way to reuse code for different types</li>
+					<li>Es6 Goodness</li>
+				</ul>
+			</section>
+			<!----------------------------------------->
+			<section id="types" data-markdown="code/types.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="classes" data-markdown="code/classes.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"
+				data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="class-shorthand" data-markdown="code/class-shorthand.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="interfaces" data-markdown="code/interfaces.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="generics" data-markdown="code/generics.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="es6" data-markdown="code/es6.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="es6-2" data-markdown="code/es6-2.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="es6-3" data-markdown="code/es6-3.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<!----------------------------------------->
+			<section id="typescript">
+				<h2>Back to AngularJS App Conversion</h2>
+			</section>
+			<section id="install-angular-types" data-markdown="code/install-angular-types.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="import-html-template" data-markdown="code/import-html-template.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="sample-controller0" data-markdown="code/sample-controller0.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="app-component" data-markdown="code/app-component.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="app-module" data-markdown="code/app-module.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="app-component-class" data-markdown="code/app-component-class.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<!----------------------------------------->
+			<section id="RxJS">
+				<h2>Start Using RxJS where it makes sense</h2>
+				<ul>
+					<li>Managing forms</li>
+					<li>Services</li>
+					<li>Routing?</li>
+				</ul>
+			</section>
+			<section id="reactive-programming-crash-course">
+				<h2>Reactive Programming Crash Course</h2>
+			</section>
+			<section>
+				<h2>Declarative Programming <br />vs Imperative Programming</h2>
+				<p class="fragment"><b>Imperative</b> - When events occur, code runs and <br />
+					changes the state of the program.</p>
+				<p class="fragment"><b>Declarative</b>-  Specifying HOW values should be generated.</p>
+				<p class="fragment"><b>Reactive</b> - A declarative programming style concerned with data “streams” and propagation of change. RxJS is a reactive <br />programming JavaScript library.</p>
+			</section>
+			<section id="observable" data-markdown="code/observable.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="subject" data-markdown="code/subject.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="behavior-subject" data-markdown="code/behavior-subject.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="operator" data-markdown="code/operator.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="async-pipe" data-markdown="code/async-pipe.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="async-pipe-example" data-markdown="code/async-pipe-example.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="queen-obs" data-markdown="code/queen-obs.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="queen-operators-html" data-markdown="code/queen-operators-html.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="queen-operators-ts" data-markdown="code/queen-operators-ts.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<!----------------------------------------->
+			<section id="angular-elements">
+				<h2>Using Angular Elements</h2>
+			</section>
+			<section id="web-components">
+				<h2>Web Components 101</h2>
+				<p>Web components are a way to build framework agnostic reusable components. </p>
+			</section>
+			<section id="web-components-api">
+				<h2>Web Components API</h2>
+				<p>Browser APIs that let us build web components:</p>
+				<ul>
+					<li class="fragment"><b>Custom elements</b> - let you define an HTML tag</li>
+					<li class="fragment"><b>Templates</b> - let you create the markup <br />that will be inserted dynamically</li>
+					<li class="fragment"><b>Shadow DOM</b> - provides encapsulation for web components</li>
+					<li class="fragment"><b>Custom events</b> - allow you to create triggers for <br />DOM interaction</li>
+				</ul>
+				<p class="fragment">Check out Bitovi's training on web components <a href="https://www.bitovi.com/academy/learn-web-components.html">here</a></p>
+			</section>
+			<section id="angular-elements-explanation">
+				<h2>Angular Elements = </h2>
+				<p>Angular Components packaged as custom elements(web components)</p>
+			</section>
+			<!-- <section id="angular-element-lifecycle" data-markdown="code/angular-element-lifecycle.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="angular-element-attributes" data-markdown="code/angular-element-attributes.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section>
+			<section id="angular-element-events" data-markdown="code/angular-element-events.md" data-separator="^\n\n\n"
+				data-separator-vertical="^\n\n" data-separator-notes="^Note:" data-charset="iso-8859-15">
+			</section> -->
+			<section id="angular-elements-research">
+				<h2>Further Angular Elements Exploration:</h2>
+				<ul>
+					<li><a href="https://angular.io/guide/elements">Angular Guide on Angular Elements</a></li>
+					<li><a href="https://medium.com/capital-one-tech/capital-one-is-using-angular-elements-to-upgrade-from-angularjs-to-angular-42f38ef7f5fd">How Capital One is Using Angular Elements to Upgrade from AngularJS</a></li>
+					<li><a href="https://steele.blue/custom-elements-angularjs">Building Custom Elements That Work With AngularJS 1.x and Angular</a></li>
+					<li><a href="https://www.youtube.com/watch?v=Z1gLFPLVJjY">"Elements in v6 and Beyond - Rob Wormald" - NG Conf 2018</a></li>
+				</ul>
+			</section>
+			<!----------------------------------------->
+			<section id="excited">
+				<h2>Excited to modernize your app?</h2>
+				<img class="plain" style="height: 500px" src="img/jonahhillscreaming.gif" alt="Jonah Hill Screaming">
+			</section>
+			<section id="what-not-to-do">
+				<h2>What NOT to Do</h2>
+				<p class="fragment">Do NOT run back to work and refactor your app
+					over the weekend WITHOUT the consent of your team.</p>
+			</section>
+			<!----------------------------------------->
+			<section id="key-concepts">
+				<h2>Key Concepts</h2>
+				<ul>
+					<li class="fragment">Begin refactoring your app to follow the AngularJS style guide</li>
+					<li class="fragment">Choose a build process that makes sense for your team</li>
+					<li class="fragment">Start with rewriting major files into TypeScript</li>
+					<li class="fragment">Implement RxJS where it makes sense</li>
+					<li class="fragment">Consider building new features in Angular Elements</li>
+					<li class="fragment">Do NOTHING without buy-in from your team!</li>
+				</ul>
+			</section>
+			<!----------------------------------------->
+			<section id="questions">
+				<h2>Questions?</h2>
+				<img style="height:300px" class="plain" src="img/headtilt.gif" alt="Corgi confused">
+				<p>Slides available at: <a href="https://tehfedaykin.github.io/ModernizingAngularJSApps/"
+						target="_blank">tehfedaykin.github.io/ModernizingAngularJSApps</a></p>
+				<p>Example App: <a href="https://github.com/tehfedaykin/AngularJSQueens"
+						target="_blank">https://github.com/tehfedaykin/AngularJSQueens</a></p>
+				<p class="small">VS Code theme - <a
+						href="https://marketplace.visualstudio.com/items?itemName=RobbOwen.synthwave-vscode">SynthWave '84 by Robb
+						Owen</a></p>
+			</section>
 		</div>
-		<div class="twitter-overlay">
-			<span>#ControlValueAccessor</span>
-			<span>@likeOMGitsFEDAY</span> 
-		</div>
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	</div>
+	<div class="twitter-overlay">
+		<span>#ModernizingAngularJS</span>
+		<span>@likeOMGitsFEDAY</span>
+	</div>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				width: 1280,
-				height: 800,
-				history: true,
-				display: 'block',
-				progress: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js', callback: function() {
-					} },
-					{ src: 'plugin/markdown/markdown.js' },
-					// { src: 'plugin/highlight/highlight.js', async: true, callback: function() { 
-					// 	hljs.configure({
-					// 		tabReplace: '    '
-					// 	})
-					// 	hljs.initHighlightingOnLoad(); 
-					// } },
-					{
-						src: 'plugin/prism/prism.js', async: true
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			width: 1280,
+			height: 800,
+			history: true,
+			display: 'block',
+			progress: true,
+			dependencies: [
+				{
+					src: 'plugin/markdown/marked.js', callback: function () {
 					}
-				]
-			});
-		</script>
-	</body>
+				},
+				{ src: 'plugin/markdown/markdown.js' },
+				// { src: 'plugin/highlight/highlight.js', async: true, callback: function() { 
+				// 	hljs.configure({
+				// 		tabReplace: '    '
+				// 	})
+				// 	hljs.initHighlightingOnLoad(); 
+				// } },
+				{
+					src: 'plugin/prism/prism.js', async: true
+				}
+			]
+		});
+	</script>
+</body>
+
 </html>

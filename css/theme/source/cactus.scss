@@ -18,16 +18,17 @@
 // Override theme settings (see ../template/settings.scss)
 $backgroundColor: #fff;
 
-$mainColor: #222;
-$headingColor: #222;
-$twitterColor: #fff;
+$mainColor: rgb(34, 34, 34);
+$headingColor: #B84F2F;
+$twitterColor: rgb(55, 55, 55);
 
 $mainFontSize: 42px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingTextShadow: none;
+$headingTextShadow: 2px 2px 5px #A9A9A9;
+$heading1TextShadow: 5px 5px 5px #A9A9A9;
 $headingLetterSpacing: normal;
-$headingTextTransform: uppercase;
+$headingTextTransform: none;
 $headingFontWeight: 600;
 $linkColor: #2a76dd;
 $linkColorHover: lighten( $linkColor, 15% );
