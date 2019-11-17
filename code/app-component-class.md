@@ -12,7 +12,7 @@ class QueensCtrl implements angular.IComponentController {
   constructor(private QueenService: any ) {}
 
   public $onInit () {
-    QueenService.getQueens().then((res) => {
+    this.QueenService.getQueens().then((res) => {
       vm.queens = res;
     })
   }
