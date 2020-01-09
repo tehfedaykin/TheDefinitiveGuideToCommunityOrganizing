@@ -49,6 +49,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "chart.js": "^2.9.3",
     "core-js": "^2.5.7",
     "zone.js": "^0.8.26"
   }

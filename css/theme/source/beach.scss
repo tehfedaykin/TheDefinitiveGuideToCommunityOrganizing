@@ -25,15 +25,16 @@ $twitterColor: #fff;
 $mainFontSize: 42px;
 $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
-$headingTextShadow: 2px 2px 5px #000;
-$headingLetterSpacing: normal;
+$headingTextShadow: 3px 3px 5px #000;
+$headingLetterSpacing: -1px;
 $headingTextTransform: uppercase;
 $headingFontWeight: 600;
-$linkColor: #2a76dd;
+$linkColor: #00D0D0;
 $linkColorHover: lighten( $linkColor, 15% );
 $selectionBackgroundColor: lighten( $linkColor, 25% );
+$accentColor: #F9745B;
 
-$heading1Size: 2.5em;
+$heading1Size: 2.3em;
 $heading2Size: 1.6em;
 $heading3Size: 1.3em;
 $heading4Size: 1.0em;
@@ -56,3 +57,5 @@ section.has-dark-background {
 @import "../template/theme";
 // ---------------------------------------------
 @import "../template/custom";
+
+
